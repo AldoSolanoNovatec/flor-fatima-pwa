@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flor para Fatima 🌷</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#f8e1e9"/>
+  <!-- Icono (puedes cambiarlo por uno tuyo) -->
+  <link rel="icon" href="https://via.placeholder.com/192x192/ffb6c1/ffffff?text=F" sizes="192x192"/>
+</head>
+<body>
+  <div id="container"></div>
+  <div class="overlay">
+    <h1>Para Fatima</h1>
+    <p>Con todo mi cariño 🌸</p>
+  </div>
+
+  <script type="module" src="script.js"></script>
+  <!-- Registrar Service Worker para PWA -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('Service Worker registrado'))
+          .catch(err => console.log('Error en SW:', err));
+      });
+    }
+  </script>
+</body>
+</html>

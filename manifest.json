@@ -1,0 +1,21 @@
+{
+  "name": "Flor para Fatima",
+  "short_name": "Fatima 🌷",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f8e1e9",
+  "theme_color": "#d81b60",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192/ffb6c1/ffffff?text=F",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512/ffb6c1/ffffff?text=F",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
