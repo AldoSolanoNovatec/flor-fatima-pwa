@@ -3,32 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Flor para Fatima 🌷</title>
+  <title>Para Fátima 🌷</title>
+
   <link rel="stylesheet" href="style.css"/>
   <link rel="manifest" href="manifest.json"/>
-  <meta name="theme-color" content="#f8e1e9"/>
-  <!-- Icono (puedes cambiarlo por uno tuyo) -->
-  <link rel="icon" href="https://via.placeholder.com/192x192/ffb6c1/ffffff?text=F" sizes="192x192"/>
+  <meta name="theme-color" content="#f6c1d1"/>
+
+  <!-- Three.js -->
+  <script src="https://unpkg.com/three@0.159.0/build/three.min.js"></script>
 </head>
+
 <body>
-  <div id="container"></div>
+  <canvas id="scene"></canvas>
+
   <div class="overlay">
-    <h1>Para Fatima</h1>
-    <p>Con todo mi cariño 🌸</p>
-    <br/><br/>
-    
-    <p>Fuck off alberto</p>
+    <h1>Para Fátima</h1>
+    <p>Esta flor florece solo para ti 🌸</p>
+    <button id="btn">Tócala 💗</button>
+    <p id="msg" class="hidden">
+      Gracias por existir.  
+      Esto no es solo una flor… es intención.
+    </p>
   </div>
 
-  <script type="module" src="script.js"></script>
-  <!-- Registrar Service Worker para PWA -->
+  <script src="script.js"></script>
+
   <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js')
-          .then(reg => console.log('Service Worker registrado'))
-          .catch(err => console.log('Error en SW:', err));
-      });
+      navigator.serviceWorker.register('sw.js');
     }
   </script>
 </body>
